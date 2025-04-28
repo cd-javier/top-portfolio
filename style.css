@@ -70,6 +70,7 @@ header h1 {
   height: 0;
   margin: 0 auto;
   transform: translateY(-4rem);
+  color: var(--highlight)
 }
 
 header nav,
@@ -165,6 +166,10 @@ footer nav svg {
   margin-top: -1px;
 }
 
+svg:hover {
+  fill: var(--text);
+}
+
 @media screen and (min-width: 660px) {
   header {
     flex-direction: row;
@@ -173,6 +178,7 @@ footer nav svg {
 
   .header-background {
     height: 40rem;
+    transform: skewY(-20deg) translateY(-50%);
   }
 
   header img {
@@ -248,5 +254,64 @@ footer nav svg {
   footer img {
     max-width: 30vw;
     object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-background {
+    width: 120vw;
+    transform: skewY(-10deg) translateY(-50%);
+  }
+
+  header {
+    align-items: center;
+
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    width: auto;
+    height: auto;
+    align-self: flex-end;
+    position: absolute;
+    transform: translate(1rem, -0.5rem);
+
+    color: var(--highlight);
+  }
+
+  header img {
+    width: 500px;
+    z-index: 1;
+  }
+
+  .about {
+    flex: 1;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .about nav {
+    justify-content: flex-end;
+  }
+
+  footer {
+    padding: 2rem 4rem;
+    justify-content: center;
+  }
+
+  .footer-content {
+    max-width: 658px;
+    flex: 1;
+  }
+
+  footer img {
+    max-width: 350px;
   }
 }
